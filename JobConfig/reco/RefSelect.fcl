@@ -2,7 +2,7 @@
 # Script to select reflecting cosmic ray particles starting with standard recoMC output
 # original author: D. Brown, 6/25/26
 #
-#include "Production/JobConfig/recoMC/prolog.fcl"
+#include "Production/JobConfig/reco/prolog.fcl"
 outputs.CentralHelixOutput.fileName : nil
 outputs.LoopHelixOutput.fileName : nil
 services : @local::Services.Reco
@@ -31,7 +31,7 @@ physics.trigger_paths : [ RePath, RmuPath ]
 outputs.RefOutput : {
   @table::Reconstruction.Output
   SelectEvents : [RePath, RmuPath]
-  fileName : "mcs.user.RefSelect.config.seq.art"
+  fileName : "rec.user.RefSelect.config.seq.art"
   outputCommands: [
     @sequence::Reconstruction.Output.outputCommands,
     "keep *_Reflect*_*_*"
