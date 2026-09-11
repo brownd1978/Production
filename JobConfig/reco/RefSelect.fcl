@@ -3,8 +3,8 @@
 # original author: D. Brown, 6/25/26
 #
 #include "Production/JobConfig/reco/prolog.fcl"
-outputs.CentralHelixOutput.fileName : nil
-outputs.LoopHelixOutput.fileName : nil
+outputs.CentralHelixOutput.fileName : @nil
+outputs.LoopHelixOutput.fileName : @nil
 services : @local::Services.Reco
 process_name: RefSelect
 source : { module_type : RootInput }
