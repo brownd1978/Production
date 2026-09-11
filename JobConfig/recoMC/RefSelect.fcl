@@ -6,7 +6,7 @@
 outputs.CentralHelixOutput.fileName : nil
 outputs.LoopHelixOutput.fileName : nil
 services : @local::Services.Reco
-process_name: RefRegrow
+process_name: RefSelect
 source : { module_type : RootInput }
 
 physics.filters : {
